@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="25dp"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:background="@drawable/layout_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Additional Input"
+                android:textColor="#2B7B8D"
+                android:textSize="24sp"
+                android:textStyle="bold"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.01" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Enter your age: "
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/inputAge"
+                android:layout_width="100dp"
+                android:layout_height="48dp"
+                android:hint="Age" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number of days disease is present: "
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner_Days"
+                android:layout_width="100dp"
+                android:layout_height="48dp"
+                android:contentDescription="Drop-down menu for number of days." />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What is your skin type: "
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner_SkinType"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:contentDescription="Drop-down menu for skin type." />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What symptoms you are experiencing: "
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/Symptom1"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="BINI"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/Symptom2"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Jiafei"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/Symptom3"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Red velvet"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/Symptom4"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="TWICE"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/Symptom5"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="BTS"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/Symptom6"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="One Direction"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/Symptom7"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Slay"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/Symptom8"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Flop"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/Symptom9"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Floptropico"
+                android:textSize="14sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
+
+            <Button
+                android:id="@+id/btnAnalyze"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/button_combine"
+                android:text="Analyze"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

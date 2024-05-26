@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="25dp"
+    tools:context=".ResultActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/layout_Diagnosis"
+                android:background="@drawable/layout_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/btnBackToAddInput"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="start"
+                    android:background="#00000000"
+                    android:contentDescription="Button to go back screen."
+                    app:srcCompat="@android:drawable/ic_menu_revert" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgDisease"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:padding="3sp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/disease_ganda"
+
+                    app:shapeAppearanceOverlay="@style/roundedCorners"
+                    app:strokeColor="@color/black"
+                    app:strokeWidth="3sp" />
+
+                <TextView
+                    android:id="@+id/txtDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgDisease"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+
+                    android:text="05/22/24"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDate"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5dp"
+
+                    android:text="09:52 PM"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/ResultView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imgDisease"
+                    android:layout_marginTop="15dp"
+                    android:text="Analyzation Result"
+                    android:textColor="#2B7B8D"
+                    android:textSize="24sp"
+
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtDiseaseName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ResultView"
+                    android:layout_marginTop="15dp"
+                    android:text="Disease Name: Ganda"
+                    android:textColor="#5FA6CD"
+                    android:textSize="18sp"
+
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtSeverity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDiseaseName"
+                    android:layout_marginTop="10dp"
+                    android:text="Severity Level: Mild"
+
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/txtAccuracy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDiseaseName"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="10dp"
+
+                    android:layout_toRightOf="@id/txtSeverity"
+                    android:text="Accuracy: 100.00%"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_Information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_Diagnosis"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/layout_background"
+
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/DescriptionView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:textColor="#2B7B8D"
+                    android:textSize="22sp"
+
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtInformation_Description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/DescriptionView"
+                    android:layout_marginTop="10dp"
+                    android:justificationMode="inter_word"
+                    android:text="Ang ganda o kagandahan (Ingles: beauty, charm) ay isang katangian ng isang tao, hayop, lokasyon o pook, bagay, o ideya na nagbibigay ng karanasan ng pananaw o hiwatig ng kaligayahan, kahulugan, o pagkapuno (satispaksiyon)."
+
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/SymptomsView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Symptoms"
+                    android:textColor="#2B7B8D"
+                    android:textSize="22sp"
+
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtInformation_Symptoms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:justificationMode="inter_word"
+                    android:text="Symptoms found in Ganda are the following: attractive Face, chiseled jawline, clear skin, smooth skin, darker under eyes (Appears during tiredness), small eyes (See handsome Squidward for reference)."
+
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/TreatmentView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtInformation_Symptoms"
+                    android:layout_marginTop="20dp"
+                    android:text="Treatments"
+                    android:textColor="#2B7B8D"
+                    android:textSize="22sp"
+
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtInformation_Treatment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TreatmentView"
+                    android:layout_marginTop="10dp"
+                    android:justificationMode="inter_word"
+                    android:text="Below are listed treatments for Ganda:
+                    \n  Vicks VapoRub
+                    \n  Efficascent Oil"
+
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/RecommendView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Recommendations"
+                    android:textColor="#2B7B8D"
+                    android:textSize="22sp"
+
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtRecommend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:justificationMode="inter_word"
+                    android:text="Eat vegetables and slay the day to achieve maximum effect."
+
+                    android:textSize="18dp" />
+
+                <Button
+                    android:id="@+id/btnConfirmDiagnosis"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_combine"
+                    android:text="Confirm"
+                    android:textColor="@color/white"
+
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
